@@ -18,6 +18,5 @@
     <string name="well_played">Хорошая игра</string>
     <string name="no_sound">Не могу найти звук</string>
     <string name="start">Выход героя</string>
-    <string name="title_activity_emotions">Эмоции</string>
     <string name="title_activity_heroes">Герои</string>
 </resources>

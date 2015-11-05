@@ -16,6 +16,9 @@ public class Second_Activity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Intent intent = getIntent();
+        final int chosen = intent.getIntExtra("head", 0);
+        getSupportActionBar().setTitle(MainActivity.listHeroes[chosen - 1]);
 
         String[] listEmotions = loadListEmotions();
 
@@ -26,8 +29,7 @@ public class Second_Activity extends ActionBarActivity {
         secondList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = getIntent();
-                sound = intent.getIntExtra("head", 0) * 10 + position;
+                sound = chosen * 10 + position;
                 int played = MainActivity.findSound(sound);
                 MainActivity.playSound(played);
             }

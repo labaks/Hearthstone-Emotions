@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     private AssetManager mAssetManager;
     private static SoundPool mSoundPool;
     private static int mStreamID;
+    public static String[] listHeroes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
         mAssetManager = getAssets();
         mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
 
-        String[] listHeroes = loadListHeroes();
+        listHeroes = loadListHeroes();
 
         generateId();
 
