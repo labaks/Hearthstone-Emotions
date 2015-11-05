@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hearthstone Emotions</string>
+    <string name="druid">Друид</string>
+    <string name="greetings">Приветствие</string>
+    <string name="hunter">Охотник</string>
+    <string name="mage">Маг</string>
+    <string name="oops">Ошибка</string>
+    <string name="paladin">Паладин</string>
+    <string name="priest">Жрец</string>
+    <string name="rogue">Разбойник</string>
+    <string name="shaman">Шаман</string>
+    <string name="sorry">Извини</string>
+    <string name="thanks">Спасибо</string>
+    <string name="threaten">Угроза</string>
+    <string name="warlock">Чернокнижник</string>
+    <string name="warrior">Воин</string>
+    <string name="well_played">Хорошая игра</string>
+    <string name="no_sound">Не могу найти звук</string>
+    <string name="start">Выход героя</string>
+    <string name="title_activity_emotions">Эмоции</string>
+    <string name="title_activity_heroes">Герои</string>
+</resources>
