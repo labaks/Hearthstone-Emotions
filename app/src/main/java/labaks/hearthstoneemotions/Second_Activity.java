@@ -20,7 +20,7 @@ public class Second_Activity extends ActionBarActivity {
         final int chosen = intent.getIntExtra("head", 0);
         getSupportActionBar().setTitle(MainActivity.listHeroes[chosen - 1]);
 
-        String[] listEmotions = loadListEmotions();
+        String[] listEmotions = getResources().getStringArray(R.array.listEmotions);
 
         ListView secondList = (ListView) findViewById(R.id.secondListView);
         secondList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listEmotions));
@@ -36,8 +36,4 @@ public class Second_Activity extends ActionBarActivity {
         });
     }
 
-    private String[] loadListEmotions() {
-        return new String[]{getResources().getString(R.string.start), getResources().getString(R.string.thanks), getResources().getString(R.string.sorry), getResources().getString(R.string.well_played),
-                getResources().getString(R.string.oops), getResources().getString(R.string.greetings), getResources().getString(R.string.threaten)};
-    }
 }

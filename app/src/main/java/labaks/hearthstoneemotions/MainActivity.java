@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
         mAssetManager = getAssets();
         mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
 
-        listHeroes = loadListHeroes();
+        listHeroes = getResources().getStringArray(R.array.listHeroes);
 
         generateId();
 
@@ -59,13 +59,6 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    private String[] loadListHeroes() {
-        return new String[]{getResources().getString(R.string.warrior), getResources().getString(R.string.shaman), getResources().getString(R.string.rogue),
-                getResources().getString(R.string.paladin), getResources().getString(R.string.hunter), getResources().getString(R.string.druid),
-                getResources().getString(R.string.warlock), getResources().getString(R.string.mage), getResources().getString(R.string.priest),
-        };
     }
 
     private int loadSound(String fileName) {

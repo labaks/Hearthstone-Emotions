@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Hearthstone Emotions</string>
-    <string name="druid">Друид</string>
-    <string name="greetings">Приветствие</string>
-    <string name="hunter">Охотник</string>
-    <string name="mage">Маг</string>
-    <string name="oops">Ошибка</string>
-    <string name="paladin">Паладин</string>
-    <string name="priest">Жрец</string>
-    <string name="rogue">Разбойник</string>
-    <string name="shaman">Шаман</string>
-    <string name="sorry">Извини</string>
-    <string name="thanks">Спасибо</string>
-    <string name="threaten">Угроза</string>
-    <string name="warlock">Чернокнижник</string>
-    <string name="warrior">Воин</string>
-    <string name="well_played">Хорошая игра</string>
     <string name="no_sound">Не могу найти звук</string>
-    <string name="start">Выход героя</string>
     <string name="title_activity_heroes">Герои</string>
+
+    <string-array name="listHeroes">
+        <item>Воин</item>
+        <item>Шаман</item>
+        <item>Разбойник</item>
+        <item>Паладин</item>
+        <item>Охотник</item>
+        <item>Друид</item>
+        <item>Чернокнижник</item>
+        <item>Маг</item>
+        <item>Жрец</item>
+    </string-array>
+
+    <string-array name="listEmotions">
+        <item>Выход героя</item>
+        <item>Спасибо</item>
+        <item>Извини</item>
+        <item>Хорошая игра</item>
+        <item>Ошибка</item>
+        <item>Приветствие</item>
+        <item>Угроза</item>
+    </string-array>
 </resources>

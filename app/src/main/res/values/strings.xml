@@ -1,23 +1,28 @@
 <resources>
     <string name="app_name">Hearthstone Emotions</string>
 
-    <string name="warrior">Warrior</string>
-    <string name="druid">Druid</string>
-    <string name="warlock">Warlock</string>
-    <string name="mage">Mage</string>
-    <string name="paladin">Paladin</string>
-    <string name="priest">Priest</string>
-    <string name="rogue">Rogue</string>
-    <string name="hunter">Hunter</string>
-    <string name="shaman">Shaman</string>
-    <string name="thanks">Thanks</string>
-    <string name="sorry">Sorry</string>
-    <string name="well_played">Well Played</string>
-    <string name="oops">Oops</string>
-    <string name="greetings">Greetings</string>
-    <string name="threaten">Threaten</string>
     <string name="no_sound">Can\'t find the sound</string>
-    <string name="start">Start</string>
-    <string name="title_activity_emotions">Emotions</string>
     <string name="title_activity_heroes">Heroes</string>
+
+    <string-array name="listHeroes">
+        <item>Warrior</item>
+        <item>Shaman</item>
+        <item>Rogue</item>
+        <item>Paladin</item>
+        <item>Hunter</item>
+        <item>Druid</item>
+        <item>Warlock</item>
+        <item>Mage</item>
+        <item>Priest</item>
+    </string-array>
+
+    <string-array name="listEmotions">
+        <item>Start</item>
+        <item>Thanks</item>
+        <item>Sorry</item>
+        <item>Well Played</item>
+        <item>Oops</item>
+        <item>Greetings</item>
+        <item>Threaten</item>
+    </string-array>
 </resources>
