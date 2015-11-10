@@ -1,21 +1,21 @@
 package labaks.hearthstoneemotions;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ListActivity {
 
     ArrayList<Integer> ids = new ArrayList<>();
     public static Sound[] sounds;
@@ -28,7 +28,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         mAssetManager = getAssets();
         mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
@@ -45,20 +44,17 @@ public class MainActivity extends ActionBarActivity {
             sounds[i].soundId = loadSound(sounds[i].soundName);
         }
 
-        ListView mainList = (ListView) findViewById(R.id.mainListView);
-        mainList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listHeroes));
-        mainList.setTextFilterEnabled(true);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listHeroes);
+        setListAdapter(adapter);
+    }
 
-        mainList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, Second_Activity.class);
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this, Second_Activity.class);
 
-                intent.putExtra("head", position + 1);
-                startActivity(intent);
-            }
-        });
+        intent.putExtra("head", position + 1);
+        startActivity(intent);
     }
 
     private int loadSound(String fileName) {
