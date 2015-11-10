@@ -7,9 +7,10 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -20,17 +21,19 @@ public class Second_Activity extends ListActivity {
     private AssetManager mAssetManager;
     private SoundPool mSoundPool;
     private int mStreamID;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        int chosen = intent.getIntExtra("head", 0);
+        int chosen = intent.getIntExtra("head", 0) + 1;
 //        TextView title = (TextView)getListView().findViewById(R.id.title);
 //        title.setText(MainActivity.listHeroes[chosen - 1]);
 
         String[] listEmotions = getResources().getStringArray(R.array.listEmotions);
+        String[] extendedEmotions = setExtEmotionsList(chosen);
 
         mAssetManager = getAssets();
         mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
@@ -39,11 +42,18 @@ public class Second_Activity extends ListActivity {
         sounds = new Sound[soundAmount];
         for (int i = 0; i < soundAmount; i++) {
             sounds[i] = new Sound();
-            sounds[i].soundName = Integer.toString(chosen + 1) + Integer.toString(i) + ".mp3";
+            sounds[i].soundName = Integer.toString(chosen) + Integer.toString(i) + ".mp3";
             sounds[i].fileId = loadSound(sounds[i].soundName);
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listEmotions);
+        listView = getListView();
+        LayoutInflater inflater = getLayoutInflater();
+        View header = inflater.inflate(R.layout.listview_header, listView, false);
+        TextView title = (TextView)header.findViewById(R.id.title);
+        title.setText(MainActivity.listHeroes[chosen - 1]);
+        listView.addHeaderView(header, null, false);
+
+        myArrayAdapter adapter = new myArrayAdapter(this, listEmotions, extendedEmotions);
         setListAdapter(adapter);
     }
 
@@ -51,6 +61,12 @@ public class Second_Activity extends ListActivity {
     protected void onListItemClick(ListView l, View view, int position, long id) {
         int played = sounds[position].fileId;
         playSound(played);
+    }
+
+    private String[] setExtEmotionsList(int chosenHero) {
+        String[] extEmotions = getResources().getStringArray(
+                getBaseContext().getResources().getIdentifier("hero_" + chosenHero, "array", getBaseContext().getPackageName()));
+        return extEmotions;
     }
 
     private int loadSound(String fileName) {
