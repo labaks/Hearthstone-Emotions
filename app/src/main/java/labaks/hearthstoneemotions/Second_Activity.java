@@ -21,7 +21,6 @@ public class Second_Activity extends ListActivity {
     private AssetManager mAssetManager;
     private SoundPool mSoundPool;
     private int mStreamID;
-    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,6 @@ public class Second_Activity extends ListActivity {
 
         Intent intent = getIntent();
         int chosen = intent.getIntExtra("head", 0) + 1;
-//        TextView title = (TextView)getListView().findViewById(R.id.title);
-//        title.setText(MainActivity.listHeroes[chosen - 1]);
 
         String[] listEmotions = getResources().getStringArray(R.array.listEmotions);
         String[] extendedEmotions = setExtEmotionsList(chosen);
@@ -46,10 +43,10 @@ public class Second_Activity extends ListActivity {
             sounds[i].fileId = loadSound(sounds[i].soundName);
         }
 
-        listView = getListView();
+        ListView listView = getListView();
         LayoutInflater inflater = getLayoutInflater();
         View header = inflater.inflate(R.layout.listview_header, listView, false);
-        TextView title = (TextView)header.findViewById(R.id.title);
+        TextView title = (TextView) header.findViewById(R.id.title);
         title.setText(MainActivity.listHeroes[chosen - 1]);
         listView.addHeaderView(header, null, false);
 
@@ -59,14 +56,13 @@ public class Second_Activity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View view, int position, long id) {
-        int played = sounds[position].fileId;
+        int played = sounds[position - 1].fileId;
         playSound(played);
     }
 
     private String[] setExtEmotionsList(int chosenHero) {
-        String[] extEmotions = getResources().getStringArray(
+        return getResources().getStringArray(
                 getBaseContext().getResources().getIdentifier("hero_" + chosenHero, "array", getBaseContext().getPackageName()));
-        return extEmotions;
     }
 
     private int loadSound(String fileName) {
