@@ -10,12 +10,14 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
     public static String[] listHeroes;
+    public static int[] backs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         listHeroes = getResources().getStringArray(R.array.listHeroes);
+        loadBackgrounds();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listHeroes);
         setListAdapter(adapter);
@@ -27,5 +29,12 @@ public class MainActivity extends ListActivity {
         intent.setClass(MainActivity.this, Second_Activity.class);
         intent.putExtra("head", position);
         startActivity(intent);
+    }
+
+    private void loadBackgrounds() {
+        backs = new int[9];
+        for (int i = 0; i < 9; i++) {
+            backs[i] = getBaseContext().getResources().getIdentifier("back_" + Integer.toString(i + 1), "drawable", getBaseContext().getPackageName());
+        }
     }
 }

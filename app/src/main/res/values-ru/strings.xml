@@ -20,100 +20,100 @@
         <item>Выход героя</item>
         <item>Спасибо</item>
         <item>Извини</item>
-        <item>Хорошая игра</item>
-        <item>Ошибка</item>
-        <item>Приветствие</item>
+        <item>Неплохо</item>
+        <item>Ой!</item>
+        <item>Здравствуй</item>
         <item>Угроза</item>
     </string-array>
 
     <string-array name="hero_1">
-        <item>Победа или смерть</item>
-        <item>Хм…Я тебе благодарен</item>
-        <item>Прости, что так получилось</item>
-        <item>Не плохо сыграно</item>
-        <item>Это была ошибка</item>
-        <item>Хм…Ну здравствуй</item>
-        <item>Я сокрушу тебя!</item>
+        <item>\"Победа или смерть\"</item>
+        <item>\"Хм…Я тебе благодарен\"</item>
+        <item>\"Прости, что так получилось\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Это была ошибка\"</item>
+        <item>\"Хм…Ну здравствуй\"</item>
+        <item>\"Я сокрушу тебя!\"</item>
     </string-array>
 
     <string-array name="hero_2">
-        <item>За молот рока</item>
-        <item>Я благодарю тебя</item>
-        <item>Извини, что так произошло</item>
-        <item>Не плохо сыграно</item>
-        <item>Это было ошибкой</item>
-        <item>Приветствую тебя</item>
-        <item>Стихии уничтожат тебя</item>
+        <item>\"За молот рока\"</item>
+        <item>\"Я благодарю тебя\"</item>
+        <item>\"Извини, что так произошло\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Это было ошибкой\"</item>
+        <item>\"Приветствую тебя\"</item>
+        <item>\"Стихии уничтожат тебя\"</item>
     </string-array>
 
     <string-array name="hero_3">
-        <item>Будь начеку</item>
-        <item>Спасибо</item>
-        <item>Мне жаль</item>
-        <item>Не плохо сыграно</item>
-        <item>Ошибки случаются</item>
-        <item>Мое почтение</item>
-        <item>Я твоя погибель</item>
+        <item>\"Будь начеку\"</item>
+        <item>\"Спасибо\"</item>
+        <item>\"Мне жаль\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Ошибки случаются\"</item>
+        <item>\"Мое почтение\"</item>
+        <item>\"Я твоя погибель\"</item>
     </string-array>
 
     <string-array name="hero_4">
-        <item>Я буду сражаться с честью</item>
-        <item>Спасибо</item>
-        <item>Извини</item>
-        <item>Не плохо сыграно</item>
-        <item>Это была ошибка</item>
-        <item>Какая встреча</item>
-        <item>Справедливость должна быть восстановлена</item>
+        <item>\"Я буду сражаться с честью\"</item>
+        <item>\"Спасибо\"</item>
+        <item>\"Извини\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Это была ошибка\"</item>
+        <item>\"Какая встреча\"</item>
+        <item>\"Справедливость должна быть восстановлена\"</item>
     </string-array>
 
     <string-array name="hero_5">
-        <item>Да начнется охота</item>
-        <item>Спасибо</item>
-        <item>Прими мои извинения</item>
-        <item>Не плохо</item>
-        <item>Не лудший ход</item>
-        <item>Здравствуй</item>
-        <item>Я не промахнусь</item>
+        <item>\"Да начнется охота\"</item>
+        <item>\"Спасибо\"</item>
+        <item>\"Прими мои извинения\"</item>
+        <item>\"Не плохо\"</item>
+        <item>\"Не лудший ход\"</item>
+        <item>\"Здравствуй\"</item>
+        <item>\"Я не промахнусь\"</item>
     </string-array>
 
     <string-array name="hero_6">
-        <item>Я должен защитить природу</item>
-        <item>Спасибо тебе</item>
-        <item>Ну извини</item>
-        <item>Хм…Не плохо сыграно</item>
-        <item>Ошибиться было не трудно</item>
-        <item>Здравствуй</item>
-        <item>Сама природа восстанет против тебя</item>
+        <item>\"Я должен защитить природу\"</item>
+        <item>\"Спасибо тебе\"</item>
+        <item>\"Ну извини\"</item>
+        <item>\"Хм…Не плохо сыграно\"</item>
+        <item>\"Ошибиться было не трудно\"</item>
+        <item>\"Здравствуй\"</item>
+        <item>\"Сама природа восстанет против тебя\"</item>
     </string-array>
 
     <string-array name="hero_7">
-        <item>Твоя душа будет моей</item>
-        <item>Благодарю</item>
-        <item>Мне жаль</item>
-        <item>Достойно</item>
-        <item>Это была ошибка</item>
-        <item>Приветствую тебя</item>
-        <item>Твоя душа познает муки</item>
+        <item>\"Твоя душа будет моей\"</item>
+        <item>\"Благодарю\"</item>
+        <item>\"Мне жаль\"</item>
+        <item>\"Достойно\"</item>
+        <item>\"Это была ошибка\"</item>
+        <item>\"Приветствую тебя\"</item>
+        <item>\"Твоя душа познает муки\"</item>
     </string-array>
 
     <string-array name="hero_8">
-        <item>Не стоило напрашиваться</item>
-        <item>Спасибо</item>
-        <item>Прошу прощения</item>
-        <item>Не плохо сыграно</item>
-        <item>Ну надо же</item>
-        <item>Здравствуй</item>
-        <item>Моя магия сокрушит тебя</item>
+        <item>\"Не стоило напрашиваться\"</item>
+        <item>\"Спасибо\"</item>
+        <item>\"Прошу прощения\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Ну надо же\"</item>
+        <item>\"Здравствуй\"</item>
+        <item>\"Моя магия сокрушит тебя\"</item>
     </string-array>
 
     <string-array name="hero_9">
-        <item>Свет дарует мне победу</item>
-        <item>Благодарю тебя</item>
-        <item>Прими мои извинения</item>
-        <item>Не плохо сыграно</item>
-        <item>Неудачно получилось</item>
-        <item>Приветствую тебя</item>
-        <item>Свет опалит тебя</item>
+        <item>\"Свет дарует мне победу\"</item>
+        <item>\"Благодарю тебя\"</item>
+        <item>\"Прими мои извинения\"</item>
+        <item>\"Не плохо сыграно\"</item>
+        <item>\"Неудачно получилось\"</item>
+        <item>\"Приветствую тебя\"</item>
+        <item>\"Свет опалит тебя\"</item>
     </string-array>
 
 </resources>

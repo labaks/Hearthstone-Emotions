@@ -6,9 +6,11 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/item_padding"
+        android:layout_height="80dp"
+        android:padding="@dimen/item_padding_vert"
         android:textSize="@dimen/label_text_size"
-        android:textColor="@color/primary_dark_material_dark"/>
+        android:textColor="@color/primary_dark_material_dark"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
 </LinearLayout>
