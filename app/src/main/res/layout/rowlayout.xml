@@ -2,26 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@drawable/item_back"
-    android:paddingLeft="@dimen/item_padding_gorizontal"
-    android:paddingTop="@dimen/item_padding_vert"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/item_padding_vert"
-    android:paddingRight="@dimen/item_padding_gorizontal">
+    android:paddingLeft="@dimen/item_padding_gorizontal"
+    android:paddingRight="@dimen/item_padding_gorizontal"
+    android:paddingTop="@dimen/item_padding_vert">
 
     <TextView
+        android:id="@+id/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/label"
-        android:textSize="@dimen/label_text_size"
         android:textColor="#5b410d"
+        android:textSize="@dimen/label_text_size"
         android:textStyle="bold"
         android:typeface="serif" />
 
     <TextView
+        android:id="@+id/subLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/subLabel"
         android:paddingLeft="@dimen/subItem_padding_left"
         android:textStyle="italic"
         android:typeface="serif" />

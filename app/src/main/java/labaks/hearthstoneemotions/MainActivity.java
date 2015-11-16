@@ -4,7 +4,6 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends ListActivity {
@@ -19,7 +18,7 @@ public class MainActivity extends ListActivity {
         listHeroes = getResources().getStringArray(R.array.listHeroes);
         loadBackgrounds();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listHeroes);
+        firstPageArrayAdapter adapter = new firstPageArrayAdapter(this, listHeroes, backs);
         setListAdapter(adapter);
     }
 

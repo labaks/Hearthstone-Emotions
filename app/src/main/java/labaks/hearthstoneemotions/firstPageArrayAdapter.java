@@ -7,26 +7,27 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class myArrayAdapter extends ArrayAdapter<String> {
+public class firstPageArrayAdapter extends ArrayAdapter<String> {
 
     private final Context context;
-    private final String[] emotions, extendedEmotions;
+    private final String[] heroes;
+    private final int[] backs;
 
-    public myArrayAdapter(Context context, String[] emotions, String[] extendedEmotions) {
-        super(context, R.layout.rowlayout, emotions);
+    public firstPageArrayAdapter(Context context, String[] heroes, int[] backs) {
+        super(context, R.layout.first_page_row_layout, heroes);
         this.context = context;
-        this.emotions = emotions;
-        this.extendedEmotions = extendedEmotions;
+        this.heroes = heroes;
+        this.backs = backs;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.rowlayout, parent, false);
+        View rowView = inflater.inflate(R.layout.first_page_row_layout, parent, false);
         TextView label = (TextView) rowView.findViewById(R.id.label);
-        TextView subItem = (TextView) rowView.findViewById(R.id.subLabel);
-        label.setText(emotions[position]);
-        subItem.setText(extendedEmotions[position]);
+        label.setText(heroes[position]);
+        label.setBackground(context.getResources().getDrawable(MainActivity.backs[position]));
         return rowView;
     }
+
 }
