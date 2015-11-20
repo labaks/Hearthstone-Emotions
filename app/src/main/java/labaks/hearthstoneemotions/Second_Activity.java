@@ -7,7 +7,9 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,6 +18,9 @@ import android.widget.Toast;
 import java.io.IOException;
 
 public class Second_Activity extends ListActivity {
+
+    private static final int SWIPE_THRESHOLD = 100;
+    private static final int SWIPE_VELOCITY_THRESHOLD = 100;
 
     private Sound[] sounds;
     private AssetManager mAssetManager;
@@ -50,6 +55,30 @@ public class Second_Activity extends ListActivity {
         title.setText(MainActivity.listHeroes[chosen - 1]);
         title.setBackgroundDrawable(getResources().getDrawable(MainActivity.backs[chosen - 1]));
         listView.addHeaderView(header, null, false);
+
+        listView.setOnTouchListener(new View.OnTouchListener() {
+            public GestureDetector gestureDetector = new GestureDetector(new GestureListener());
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                return gestureDetector.onTouchEvent(event);
+            }
+
+            final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+
+                @Override
+                public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                    float diffX = e2.getX() - e1.getX();
+                    if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                        if (diffX > 0) {
+                            finish();
+                        }
+                    }
+                    return true;
+                }
+            }
+        });
+
         myArrayAdapter adapter = new myArrayAdapter(this, listEmotions, extendedEmotions);
         setListAdapter(adapter);
     }
