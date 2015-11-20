@@ -26,7 +26,7 @@ public class firstPageArrayAdapter extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.first_page_row_layout, parent, false);
         TextView label = (TextView) rowView.findViewById(R.id.label);
         label.setText(heroes[position]);
-        label.setBackgroundDrawable(context.getResources().getDrawable(MainActivity.backs[position]));
+        label.setBackgroundDrawable(context.getResources().getDrawable(backs[position]));
         return rowView;
     }
 
