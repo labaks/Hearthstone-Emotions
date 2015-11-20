@@ -48,7 +48,7 @@ public class Second_Activity extends ListActivity {
         View header = inflater.inflate(R.layout.listview_header, listView, false);
         TextView title = (TextView) header.findViewById(R.id.title);
         title.setText(MainActivity.listHeroes[chosen - 1]);
-        title.setBackground(getResources().getDrawable(MainActivity.backs[chosen - 1]));
+        title.setBackgroundDrawable(getResources().getDrawable(MainActivity.backs[chosen - 1]));
         listView.addHeaderView(header, null, false);
         myArrayAdapter adapter = new myArrayAdapter(this, listEmotions, extendedEmotions);
         setListAdapter(adapter);
