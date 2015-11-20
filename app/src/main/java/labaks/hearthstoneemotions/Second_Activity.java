@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -55,6 +56,7 @@ public class Second_Activity extends ListActivity {
         title.setText(MainActivity.listHeroes[chosen - 1]);
         title.setBackgroundDrawable(getResources().getDrawable(MainActivity.backs[chosen - 1]));
         listView.addHeaderView(header, null, false);
+        listView.setBackgroundColor(Color.parseColor("#433123"));
 
         listView.setOnTouchListener(new View.OnTouchListener() {
             public GestureDetector gestureDetector = new GestureDetector(new GestureListener());
